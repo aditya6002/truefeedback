@@ -24,7 +24,8 @@ const UserSchema:Schema = new Schema({
         type:String,
         required:[true,'Email is required'],
         trim:true,
-        unique:true
+        unique:true,
+        regex:[/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Invalid email format'],
     },
     password:{
         type:String,
